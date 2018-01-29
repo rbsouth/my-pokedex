@@ -1,9 +1,12 @@
-html { 
+html{ 
   background: url(images/pikabackground.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+ul{
+	list-style-type: none;
 }
 #pokedex{
 	height: 540px;
@@ -29,39 +32,155 @@ html {
 	top: 152px;
 	left: 52px;
 }
+	#favorite-screen{
+	height: 170px;
+	width: 251px;
+	border-radius: 14px;
+	background: #fbfbfb;
+	position: relative;
+	overflow: scroll;
+	top: 152px;
+	left: 52px;
+	display: none;
+}
 #name-list{
 	margin-left: 10px;
 	height: 170px;
 	width: 160px;
+	cursor: pointer;
 	border-radius: 14px;
 	background: #fbfbfb;
 	position: relative;
 }
+#favorite-list{
+	margin-left: 10px;
+	height: 170px;
+	width: 160px;
+	cursor: pointer;
+	border-radius: 14px;
+	background: #fbfbfb;
+	position: relative;
+	line-height: 32px;
+	font-family: 'Courier New', Courier, monospace;
+}
+#sprite-display {
+  height: 172px;
+  width: 139px;
+  position: absolute;
+  top: 151px;
+  left: 163px;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  background: #fbfbfb;
+  overflow: scroll;
+}
 .pokemon-name{
 	font-family: 'Courier New', Courier, monospace;
 }
-#green-screen{
-	height: 111px;
-	width: 230px;
-	background: #30fb04;
-	border-radius: 14px;
-	position: relative;
-	top: -7px;
-	left: 434px;
+#green-screen {
+  height: 95px;
+  width: 230px;
+  background: #30fb04;
+  border-radius: 14px;
+  position: absolute;
+  top: 165px;
+  left: 434px;
 }
-#left-side-buttons{
-	height: 130px;
-	width: 296px;
-	position: relative;
-	background: #fb0605;
-	bottom: -100px;
-	right: -28px;
+#left-side-buttons {
+  height: 130px;
+  width: 296px;
+  position: absolute;
+  background: #fb0605;
+  bottom: 29px;
+  right: 389px;
 }
-#right-side-buttons{
-	height: 230px;
-	width: 260px;
-	background: #fb0605;
-	position: relative;
-	top: -131px;
-	left: 417px;
+#left-circle-button{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: black;
+	top: 28px;
+	left: 8px;
+	cursor: pointer;
+}
+#right-side-buttons {
+  height: 106px;
+  width: 260px;
+  background: #fb0605;
+  position: absolute;
+  top: 282px;
+  left: 417px;
+}
+.blue-button{
+	height: 48px;
+	width: 48px;
+	background: blue;
+	border-radius: 5px;
+}
+#left-wide-button {
+  height: 6px;
+  width: 50px;
+  background: #fb9b05;
+  position: absolute;
+  top: 16px;
+  left: 66px;
+  cursor: pointer;
+}
+#right-wide-button {
+  height: 6px;
+  width: 50px;
+  background: blue;
+  margin: 1px;
+  position: absolute;
+  top: 15px;
+  left: 145px;
+  cursor: pointer;
+}
+#dpad-up {
+  height: 27px;
+  width: 18px;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  background: grey;
+}
+#dpad-right {
+  height: 18px;
+  width: 27px;
+  position: absolute;
+  top: 52px;
+  right: 23px;
+  background: grey;
+}
+#dpad-down {
+  height: 27px;
+  width: 18px;
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  background: grey;
+}
+#dpad-left {
+  height: 18px;
+  width: 27px;
+  position: absolute;
+  top: 52px;
+  right: 68px;
+  background: grey;
+}
+#small-screen {
+  height: 61px;
+  width: 100px;
+  position: absolute;
+  top: 53px;
+  right: 120px;
+  background: #30fb04;
+  border-radius: 15px;
+}
+#info-list{
+	font-family: 'Courier New', Courier, monospace;
+}
+.active{
+	background: lightgrey;
 }
