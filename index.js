@@ -61,17 +61,17 @@ $(function(){
 	var pokedex = new Pokedex();
 	pokedex.getList();
 
-	var pokename = $(".pokemon-name")
+	var pokename = $(".pokemon-name");
 	pokename.click(function(){
 		pokedex.showDetails($(this).data('name'));
-		$('.active').removeClass('active')
-		$(this).addClass('active')
+		$('.active').removeClass('active');
+		$(this).addClass('active');
 	});
 	pokedex.addFavoriteList();
 
 	var add_fav_button = $('#left-circle-button');
 		add_fav_button.click(function(){
-		var active_pokemon = $('.active')
+		var active_pokemon = $('.active');
 		pokedex.clearFavList();
 		pokedex.addFav(active_pokemon.data('name'));
 		pokedex.addFavoriteList();
@@ -79,7 +79,7 @@ $(function(){
 
 	var fav_button = $("#left-wide-button");
 	var white_screen = $("#white-screen");
-	var fav_screen = $("#favorite-screen")
+	var fav_screen = $("#favorite-screen");
 	fav_button.click(function(){
 		pokedex.clearDetails();
 		white_screen.css("display", "none");
