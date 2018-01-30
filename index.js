@@ -1,10 +1,14 @@
 var url = "https://pokeapi.co/api/v2/pokemon/";
 
 class Pokedex {
-	constructor(){
+	constructor(theme){
+		this.theme = theme
 		this.pokemonList = pokemonArray;
 		this.favorites = [];
 		this.sprites = [];
+	}
+	playTheme(){
+		this.theme.play();
 	}
 	getList(){
 		for (var i = 0; i < this.pokemonList.length; i++) {
@@ -58,8 +62,18 @@ class Pokedex {
 //$('#id').html(array.map(name => '<li>${name}</li>'))
 
 $(function(){
-	var pokedex = new Pokedex();
+
+  $( ".sortable" ).sortable();
+  $( ".sortable" ).disableSelection();
+
+	var theme = $('#theme');
+	var pokedex = new Pokedex(theme[0]);
 	pokedex.getList();
+
+	var blue_button = $('.blue-button');
+	blue_button.click(function(){
+		pokedex.playTheme();
+	});
 
 	var pokename = $(".pokemon-name");
 	pokename.click(function(){
@@ -76,7 +90,7 @@ $(function(){
 		pokedex.addFav(active_pokemon.data('name'));
 		pokedex.addFavoriteList();
 	});
-
+		
 	var fav_button = $("#left-wide-button");
 	var white_screen = $("#white-screen");
 	var fav_screen = $("#favorite-screen");
