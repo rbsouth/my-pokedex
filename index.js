@@ -62,6 +62,10 @@ class Pokedex {
 //$('#id').html(array.map(name => '<li>${name}</li>'))
 
 $(function(){
+
+  $( ".sortable" ).sortable();
+  $( ".sortable" ).disableSelection();
+
 	var theme = $('#theme');
 	var pokedex = new Pokedex(theme[0]);
 	pokedex.getList();
@@ -86,7 +90,7 @@ $(function(){
 		pokedex.addFav(active_pokemon.data('name'));
 		pokedex.addFavoriteList();
 	});
-
+		
 	var fav_button = $("#left-wide-button");
 	var white_screen = $("#white-screen");
 	var fav_screen = $("#favorite-screen");
